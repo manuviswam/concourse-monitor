@@ -5,10 +5,11 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build && go build -o build/monitor main.go && cp -r dist build/",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "goServer": "npm run build && build/monitor"
   },
   "private": true,
   "dependencies": {
