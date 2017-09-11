@@ -1,0 +1,13 @@
+.box {
+  text-align: center;
+  padding: 10px;
+  border: 1px solid black;
+}
+
+.green {
+  background-color: darkgreen;
+}
+
+.red {
+  background-color: darkred;
+}
