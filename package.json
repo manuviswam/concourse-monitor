@@ -9,7 +9,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "goServer": "npm run build && build/monitor"
+    "goServer": "cd build && monitor"
   },
   "private": true,
   "dependencies": {
