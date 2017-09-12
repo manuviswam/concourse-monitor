@@ -1,13 +1,13 @@
 export class PipelineStatus {
-  id: string;
-  name: string;
-  success: boolean;
-  order: number;
+  Id: string;
+  Name: string;
+  Success: boolean;
+  Order: number;
 
   constructor(id: string, name: string, success: boolean, order: number) {
-    this.id = id;
-    this.name = name;
-    this.success = success;
-    this.order = order;
+    this.Id = id;
+    this.Name = name;
+    this.Success = success;
+    this.Order = order;
   }
 }

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {PipelineStatus} from "../model/pipeline-status";
 import * as Rx from 'rxjs/Rx';
+import {PipelineMessage} from "../model/pipeline-message";
 
 @Component({
   selector: 'app-root',
@@ -14,12 +15,8 @@ export class AppComponent {
   constructor() {
     let messageObserver = this.connect("ws://localhost:8000/ws");
     messageObserver.subscribe((val)=> {
-      console.log(val)
+      this.pipelineStatuses = JSON.parse(val.data).PipelineStatuses;
     });
-    this.pipelineStatuses = [];
-    for (let i =0; i<10 ; i++) {
-      this.pipelineStatuses.push(new PipelineStatus("id" +i, "Pipeline "+i, i%3 == 0, i));
-    }
   }
 
   private socket: Rx.Subject<any>;
